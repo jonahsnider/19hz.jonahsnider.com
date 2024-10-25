@@ -1,4 +1,3 @@
-import { captureException } from '@sentry/nextjs';
 import { load } from 'cheerio';
 import { parseEventDate } from './date-parser/date-parser';
 import type { EventListing } from './event-listing';

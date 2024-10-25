@@ -23,7 +23,7 @@ export default withSentryConfig(nextConfig, {
 
 	// Automatically annotate React components to show their full name in breadcrumbs and session replay
 	reactComponentAnnotation: {
-    // If this is enabled it will insert component names into the RSS XML
+		// If this is enabled it will insert component names into the RSS XML
 		enabled: false,
 	},
 

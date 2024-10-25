@@ -11,7 +11,7 @@ export function createFeed(eventListings: EventListing[]): string {
 
 function AppRss({ eventListings }: { eventListings: EventListing[] }) {
 	return (
-		<rss version="2.0">
+		<rss version='2.0'>
 			<AppChannel eventListings={eventListings} />
 		</rss>
 	);
@@ -72,7 +72,7 @@ function ChannelItem({ eventListing }: { eventListing: EventListing }) {
 				{eventListing.organizers && `\nOrganizers: ${eventListing.organizers}`}
 				{eventListing.link && `\nLinks: ${eventListing.link.label} (${eventListing.link.url})`}
 			</description>
-			<guid isPermaLink="true">{eventListing.title.url}</guid>
+			<guid isPermaLink='true'>{eventListing.title.url}</guid>
 		</item>
 	);
 }
