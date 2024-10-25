@@ -46,6 +46,15 @@ test('parses dates without end time', () => {
 			end: undefined,
 		},
 	});
+	assertTestCase({
+		input: 'Mon: Oct 21 (8:30pm)',
+		region: 'BayArea',
+		expected: {
+			timezone: 'America/Los_Angeles',
+			start: `10/21/${currentYear}, 8:30:00 PM`,
+			end: undefined,
+		},
+	});
 });
 
 test('parses multiple dates', () => {
