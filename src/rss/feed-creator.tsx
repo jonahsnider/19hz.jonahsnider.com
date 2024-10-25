@@ -1,6 +1,7 @@
 /* @jsxImportSource jsx-to-xml */
 
 import type { EventListing } from '@/data-fetching/event-listing';
+import { format } from 'date-fns';
 import type { PropsWithChildren } from 'react';
 
 export function createFeed(eventListings: EventListing[]): string {
@@ -104,6 +105,7 @@ function ChannelItem({ eventListing }: { eventListing: EventListing }) {
 					</>
 				)}
 			</description>
+			<pubDate>{format(eventListing.date.start, 'EEE, dd MMM yyyy HH:mm:ss xxxx')}</pubDate>
 			<guid>
 				<CData>
 					{eventListing.date.raw}
