@@ -67,6 +67,16 @@ test('parses multiple dates', () => {
 			end: `10/27/${currentYear}, 1:00:00 AM`,
 		},
 	});
+
+	assertTestCase({
+		input: 'Fri: Nov 29-Sun: Dec 1 (8pm-3:15am)',
+		region: 'BayArea',
+		expected: {
+			timezone: 'America/Los_Angeles',
+			start: `11/29/${currentYear}, 8:00:00 PM`,
+			end: `12/1/${currentYear}, 3:15:00 AM`,
+		},
+	});
 });
 
 test('parses dates in different timezones', () => {

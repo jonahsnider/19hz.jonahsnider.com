@@ -13,7 +13,7 @@ const SINGLE_DAY_START_END_TIME_REGEX =
 	/^(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun): (?<date>(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2}(?:, \d{4})?) \((?<startTime>\d{1,2}(?::\d{2})?[ap]m)-(?<endTime>\d{1,2}(?::\d{2})?[ap]m)\)$/i;
 /** Fri: Oct 25-Sun: Oct 27 (Fri: 6pm-Sun: 1am) */
 const MULTI_DAY_START_END_TIME_REGEX =
-	/^(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun): (?<startDate>(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2}(?:, \d{4})?)-(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun): (?<endDate>(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2}(?:, \d{4})?) \((?:Mon|Tue|Wed|Thu|Fri|Sat|Sun): (?<startTime>\d{1,2}(?::\d{2})?[ap]m)-(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun): (?<endTime>\d{1,2}(?::\d{2})?[ap]m)\)$/i;
+	/^(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun): (?<startDate>(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2}(?:, \d{4})?)-(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun): (?<endDate>(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2}(?:, \d{4})?) \((?:(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun): )?(?<startTime>\d{1,2}(?::\d{2})?[ap]m)-(?:(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun): )?(?<endTime>\d{1,2}(?::\d{2})?[ap]m)\)$/i;
 
 export function identifyDateFormat(dateString: string): string | undefined {
 	const singleDayMatched = SINGLE_DAY_START_TIME_REGEX.exec(dateString);
