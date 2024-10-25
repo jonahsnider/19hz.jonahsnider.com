@@ -4,25 +4,27 @@ import type { EventListing } from '@/data-fetching/event-listing';
 import { format } from 'date-fns';
 import type { PropsWithChildren } from 'react';
 
-export function createFeed(eventListings: EventListing[]): string {
+export function createFeed(eventListings: EventListing[], region: string): string {
 	// jsx-to-xml will render this to a string, so this is safe
-	const rssString = AppRss({ eventListings }) as unknown as string;
+	const rssString = AppRss({ eventListings, region }) as unknown as string;
 
 	return `<?xml version="1.0" encoding="utf-8"?>${rssString}`;
 }
 
-function AppRss({ eventListings }: { eventListings: EventListing[] }) {
+function AppRss({ eventListings, region }: { eventListings: EventListing[]; region: string }) {
 	return (
-		<rss version='2.0'>
-			<AppChannel eventListings={eventListings} />
+		// TODO: Need to migrate to xmlbuilder2 :(
+		// Can't use a:b syntax bc JSX will throw. Seems like in general this is just too janky of a concept within a Next.js/React app.
+		<rss version='2.0' /* xmlns:atom='http://www.w3.org/2005/Atom' */>
+			<AppChannel eventListings={eventListings} region={region} />
 		</rss>
 	);
 }
 
-function AppChannel({ eventListings }: { eventListings: EventListing[] }) {
+function AppChannel({ eventListings, region }: { eventListings: EventListing[]; region: string }) {
 	return (
 		<channel>
-			<ChannelMetadata />
+			<ChannelMetadata region={region} />
 
 			{eventListings.map((eventListing) => (
 				<ChannelItem key={eventListing.title.content} eventListing={eventListing} />
@@ -31,7 +33,7 @@ function AppChannel({ eventListings }: { eventListings: EventListing[] }) {
 	);
 }
 
-function ChannelMetadata() {
+function ChannelMetadata({ region }: { region: string }) {
 	return (
 		<>
 			<title>19hz.info</title>
@@ -51,6 +53,11 @@ function ChannelMetadata() {
 				<width>32</width>
 				<height>32</height>
 			</image>
+			{/* <atom:link
+				href={`https://19hz.jonahsnider.com/api/region/${encodeURIComponent(region)}/feed.xml`}
+				rel='self'
+				type='application/rss+xml'
+			/> */}
 		</>
 	);
 }
@@ -108,6 +115,7 @@ function ChannelItem({ eventListing }: { eventListing: EventListing }) {
 			<pubDate>{format(eventListing.date.start, 'EEE, dd MMM yyyy HH:mm:ss xxxx')}</pubDate>
 			<guid>
 				<CData>
+					{/* TODO: Need to do a legit hash here, having arbitrary characters fails validation */}
 					{eventListing.date.raw}
 					{eventListing.title.content}
 					{eventListing.venue}
