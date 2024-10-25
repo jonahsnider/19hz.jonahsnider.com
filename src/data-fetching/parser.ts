@@ -11,8 +11,9 @@ export function parseEventListingHtml(html: string, region: string): EventListin
 	// The first table is non-repeating events
 	const eventsTableBody = dom('table>tbody').first();
 
-	return Iterator.from(eventsTableBody.children('tr'))
-		.map((row): EventListing | undefined => {
+	return eventsTableBody
+		.children('tr')
+		.map((index, row): EventListing | undefined => {
 			const [rawDate, rawTitleAndVenue, rawTags, rawPriceAndAge, rawOrganizers, rawLink] = row.children;
 
 			const dateString = dom(rawDate).text();
@@ -67,6 +68,6 @@ export function parseEventListingHtml(html: string, region: string): EventListin
 				venue,
 			};
 		})
-		.filter((value) => value !== undefined)
-		.toArray();
+		.toArray()
+		.filter((value) => value !== undefined);
 }
