@@ -1,12 +1,10 @@
-import { multiReplace } from '@jonahsnider/util';
-
 /**
  * Thu: Oct 24 (8pm)
  * Fri: Jan 10, 2025 (8pm)
  * Sat: Oct 26 (9:30pm)
  */
 const SINGLE_DAY_START_TIME_REGEX =
-	/^(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun): (?<date>(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2}(?:, \d{4})?) \((?<startTime>\d{1,2}(?::\d{2})?[ap]m\))$/i; /**
+	/^(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun): (?<date>(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2}(?:, \d{4})?) \((?<startTime>\d{1,2}(?::\d{2})?[ap]m)\)$/i; /**
  * Thu: Oct 24 (8pm-12am)
  * Fri: Jan 17, 2025 (9pm-1am)
  * Fri: Oct 25 (4:30pm-9:30pm)
