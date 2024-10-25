@@ -1,6 +1,7 @@
 /* @jsxImportSource jsx-to-xml */
 
 import type { EventListing } from '@/data-fetching/event-listing';
+import type { PropsWithChildren } from 'react';
 
 export function createFeed(eventListings: EventListing[]): string {
 	// jsx-to-xml will render this to a string, so this is safe
@@ -53,26 +54,59 @@ function ChannelMetadata() {
 	);
 }
 
+function CData({ children }: PropsWithChildren) {
+	return (
+		<>
+			{'<![CDATA[ '}
+			{children}
+			{' ]]>'}
+		</>
+	);
+}
+
 function ChannelItem({ eventListing }: { eventListing: EventListing }) {
 	return (
 		<item>
 			<title>
-				{eventListing.title.content} @ {eventListing.venue}
+				<CData>
+					{eventListing.title.content} @ {eventListing.venue}
+				</CData>
 			</title>
 			{eventListing.tags.map((tag) => (
-				<category key={tag}>{tag}</category>
+				<category key={tag}>
+					<CData>{tag}</CData>
+				</category>
 			))}
 			{/* biome-ignore lint/correctness/noVoidElementsWithChildren: This isn't the HTML link element */}
-			<link>{eventListing.title.url}</link>
+			<link>
+				<CData>{eventListing.title.url}</CData>
+			</link>
 			<description>
 				Date/Time: {eventListing.date.raw}
 				{'\n'}
-				Tags: {eventListing.tags.join(', ')}
-				{eventListing.priceAndAge && `\nPrice | Age: ${eventListing.priceAndAge}`}
-				{eventListing.organizers && `\nOrganizers: ${eventListing.organizers}`}
-				{eventListing.link && `\nLinks: ${eventListing.link.label} (${eventListing.link.url})`}
+				Tags: <CData>{eventListing.tags.join(', ')}</CData>
+				{eventListing.priceAndAge && (
+					<>
+						{'\n'}Price | Age: <CData>{eventListing.priceAndAge}</CData>
+					</>
+				)}
+				{eventListing.organizers && (
+					<>
+						{'\n'}Organizers: <CData>{eventListing.organizers}</CData>
+					</>
+				)}
+				{eventListing.link && (
+					<>
+						{'\n'}Links:{' '}
+						<CData>
+							{eventListing.link.label} ({eventListing.link.url})
+						</CData>
+					</>
+				)}
 			</description>
-			<guid isPermaLink='true'>{eventListing.title.url}</guid>
+			<guid isPermaLink='true'>
+				<CData>{eventListing.title.url}</CData>
+			</guid>
 		</item>
 	);
 }
