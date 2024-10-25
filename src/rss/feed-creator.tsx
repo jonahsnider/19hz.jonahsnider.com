@@ -104,8 +104,12 @@ function ChannelItem({ eventListing }: { eventListing: EventListing }) {
 					</>
 				)}
 			</description>
-			<guid isPermaLink='true'>
-				<CData>{eventListing.title.url}</CData>
+			<guid>
+				<CData>
+					{eventListing.date.raw}
+					{eventListing.title.content}
+					{eventListing.venue}
+				</CData>
 			</guid>
 		</item>
 	);
