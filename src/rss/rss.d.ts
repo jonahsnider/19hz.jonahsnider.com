@@ -5,16 +5,8 @@ declare global {
 			/** @see https://www.rssboard.org/rss-specification */
 			rss: {
 				version: '2.0';
-				'xmlns:atom'?: string;
 				children: Element;
 			};
-
-			'atom:link': {
-				href: string;
-				rel: 'self';
-				type: 'application/rss+xml';
-			};
-
 			/** @see https://www.rssboard.org/rss-specification#requiredChannelElements */
 			channel: ClassAttributes<{
 				children: [Element, ...Element[]];
