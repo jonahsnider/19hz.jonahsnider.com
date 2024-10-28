@@ -5,7 +5,7 @@ import convert from 'convert';
 import type { EventListing } from './event-listing';
 import { parseEventListingHtml } from './parser';
 
-const EVENT_LISTING_CACHE_TTL = convert(1, 'hour');
+const EVENT_LISTING_CACHE_TTL = convert(6, 'hour');
 
 export async function fetchEventListings(region: string): Promise<EventListing[]> {
 	const request = new Request(`https://19hz.info/eventlisting_${encodeURIComponent(region)}.php`, {
