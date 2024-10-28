@@ -18,6 +18,8 @@ const REGION_TO_TIMEZONE = {
 	LasVegas: 'PT',
 	Phoenix: 'PT',
 	PNW: 'PT',
+	ORE: 'PT',
+	BC: 'PT',
 };
 
 export function getTimezoneForRegion(region: string): string {
