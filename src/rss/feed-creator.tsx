@@ -16,10 +16,17 @@ function createAppRss(eventListings: EventListing[], region: string) {
 }
 
 function createAppChannel(eventListings: EventListing[], region: string) {
+	const seenHashes = new Set<string>();
+
 	return fragment()
 		.ele('channel')
 		.import(createChannelMetadata(region))
-		.import(eventListings.reduce((items, eventListing) => items.import(createChannelItem(eventListing)), fragment()));
+		.import(
+			eventListings.reduce(
+				(items, eventListing) => items.import(createChannelItem(eventListing, seenHashes)),
+				fragment(),
+			),
+		);
 }
 
 function createChannelMetadata(region: string) {
@@ -64,7 +71,7 @@ function createChannelMetadata(region: string) {
 	return metadataFragment;
 }
 
-function createChannelItem(eventListing: EventListing) {
+function createChannelItem(eventListing: EventListing, seenHashes: Set<string>) {
 	const itemFragment = fragment().ele('item');
 
 	itemFragment.ele('title').txt(`${eventListing.title.content} @ ${eventListing.venue}`);
@@ -94,8 +101,16 @@ function createChannelItem(eventListing: EventListing) {
 
 	itemFragment.ele('pubDate').txt(format(eventListing.date.start, 'EEE, dd MMM yyyy HH:mm:ss xxxx'));
 
+	const hash = hashEvent(eventListing);
+	if (seenHashes.has(hash)) {
+		throw new Error(
+			`Event hash collision: ${hash} - ${eventListing.title.content} @ ${eventListing.venue} (${eventListing.date.raw})`,
+		);
+	}
+	seenHashes.add(hash);
+
 	// Use a hash as the GUID
-	itemFragment.ele('guid').txt(hashEvent(eventListing));
+	itemFragment.ele('guid').txt(hash);
 
 	return itemFragment;
 }
