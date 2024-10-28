@@ -4,7 +4,7 @@ import { identifyDateFormat } from './heuristic';
 import { getTimezoneForRegion } from './timezone';
 
 export function parseEventDate(
-	eventDate: string,
+	rawDate: string,
 	region: string,
 ):
 	| undefined
@@ -13,10 +13,10 @@ export function parseEventDate(
 			start: Date;
 			end: Date | undefined;
 	  } {
-	const identified = identifyDateFormat(eventDate);
+	const identified = identifyDateFormat(rawDate);
 
 	if (!identified) {
-		captureException(new RangeError(`Unable to normalize event date: ${eventDate}`));
+		captureException(new RangeError(`Unable to normalize event date: ${rawDate}`));
 		return undefined;
 	}
 
@@ -26,12 +26,12 @@ export function parseEventDate(
 	const [parsed] = parse(normalized);
 
 	if (!parsed) {
-		captureException(new RangeError(`Unable to parse event date after normalize: ${eventDate}`));
+		captureException(new RangeError(`Unable to parse event date after normalize: ${rawDate}`));
 		return undefined;
 	}
 
 	return {
-		raw: eventDate,
+		raw: rawDate,
 		start: parsed.start.date(),
 		end: parsed.end?.date(),
 	};
