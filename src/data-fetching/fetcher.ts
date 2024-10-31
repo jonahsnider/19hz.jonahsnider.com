@@ -1,16 +1,16 @@
 import { AppException } from '@/exceptions/app-exception';
 import { HTTPError } from '@/exceptions/http-exception';
 import { captureException } from '@sentry/nextjs';
-import convert from 'convert';
 import type { EventListing } from './event-listing';
 import { parseEventListingHtml } from './parser';
-
-export const EVENT_LISTING_CACHE_TTL = convert(6, 'hour');
 
 export async function fetchEventListings(region: string): Promise<EventListing[]> {
 	const request = new Request(`https://19hz.info/eventlisting_${encodeURIComponent(region)}.php`, {
 		next: {
-			revalidate: EVENT_LISTING_CACHE_TTL.to('s'),
+			// 6 hours in seconds
+			// This can't be dynamically calculated because Next is stupid and will either silently ignore it or throw an error on build
+			// We also can't reference a constant that's exported since that can't be resolved by their stupid bundling tech
+			revalidate: 21600,
 		},
 		headers: {
 			'user-agent': '19hz.jonahsnider.com',
