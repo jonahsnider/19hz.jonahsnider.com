@@ -1,36 +1,13 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 19hz.jonahsnider.com
 
-## Getting Started
+I live in the bay area and like staying active in the local rave scene (really into experimental bass music & jungle right now).
+[19hz.info](https://19hz.info) is the most complete listing of bay area music events, but doesn't have any way to get notifications when new events are added.
+This app gives me an RSS feed of the events on 19hz.info which I can plug into something like Zapier to let me know whenever a new event pops up.
 
-First, run the development server:
+## Usage
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The website is available at [19hz.jonahsnider.com](https://19hz.jonahsnider.com).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You can access the feed for a region by visiting `https://19hz.jonahsnider.com/api/region/{region}/feed.xml`, where `{region}` is the region code used by 19hz.info.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For example, the link for the bay area region (`BayArea` region code) is [19hz.jonahsnider.com/api/region/BayArea/feed.xml](https://19hz.jonahsnider.com/api/region/BayArea/feed.xml).
