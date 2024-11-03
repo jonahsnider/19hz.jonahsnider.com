@@ -8,8 +8,8 @@ export async function fetchEventListings(region: string): Promise<EventListing[]
 	const request = new Request(`https://19hz.info/eventlisting_${encodeURIComponent(region)}.php`, {
 		next: {
 			// 6 hours in seconds
-			// This can't be dynamically calculated because Next is stupid and will either silently ignore it or throw an error on build
-			// We also can't reference a constant that's exported since that can't be resolved by their stupid bundling tech
+			// This can't be dynamically calculated because Next will either silently ignore it or throw an error on build
+			// We also can't reference a constant that's exported since that can't be resolved by their very simple bundling tech
 			revalidate: 21600,
 		},
 		headers: {
