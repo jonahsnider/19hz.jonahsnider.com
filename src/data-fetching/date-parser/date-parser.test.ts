@@ -2,8 +2,6 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { parseEventDate } from './date-parser';
 
-const currentYear = new Date().getFullYear();
-
 type TestCase = {
 	input: string;
 	region: string;
@@ -30,8 +28,8 @@ test('parses dates with start and end time', () => {
 		region: 'BayArea',
 		expected: {
 			timezone: 'America/Los_Angeles',
-			start: `10/21/${currentYear}, 7:30:00 PM`,
-			end: `10/21/${currentYear}, 8:45:00 PM`,
+			start: '10/21/2024, 7:30:00 PM',
+			end: '10/21/2024, 8:45:00 PM',
 		},
 	});
 });
@@ -42,7 +40,7 @@ test('parses dates without end time', () => {
 		region: 'BayArea',
 		expected: {
 			timezone: 'America/Los_Angeles',
-			start: `10/21/${currentYear}, 8:00:00 PM`,
+			start: '10/21/2024, 8:00:00 PM',
 			end: undefined,
 		},
 	});
@@ -51,7 +49,7 @@ test('parses dates without end time', () => {
 		region: 'BayArea',
 		expected: {
 			timezone: 'America/Los_Angeles',
-			start: `10/21/${currentYear}, 8:30:00 PM`,
+			start: '10/21/2024, 8:30:00 PM',
 			end: undefined,
 		},
 	});
@@ -63,8 +61,8 @@ test('parses multiple dates', () => {
 		region: 'BayArea',
 		expected: {
 			timezone: 'America/Los_Angeles',
-			start: `10/25/${currentYear}, 6:00:00 PM`,
-			end: `10/27/${currentYear}, 1:00:00 AM`,
+			start: '10/25/2024, 6:00:00 PM',
+			end: '10/27/2024, 1:00:00 AM',
 		},
 	});
 
@@ -73,8 +71,8 @@ test('parses multiple dates', () => {
 		region: 'BayArea',
 		expected: {
 			timezone: 'America/Los_Angeles',
-			start: `11/29/${currentYear}, 8:00:00 PM`,
-			end: `12/1/${currentYear}, 3:15:00 AM`,
+			start: '11/29/2024, 8:00:00 PM',
+			end: '12/1/2024, 3:15:00 AM',
 		},
 	});
 });
@@ -85,8 +83,8 @@ test('parses dates in different timezones', () => {
 		region: 'Texas',
 		expected: {
 			timezone: 'America/Denver',
-			start: `10/25/${currentYear}, 6:00:00 PM`,
-			end: `10/27/${currentYear}, 1:00:00 AM`,
+			start: '10/25/2024, 6:00:00 PM',
+			end: '10/27/2024, 1:00:00 AM',
 		},
 	});
 });
