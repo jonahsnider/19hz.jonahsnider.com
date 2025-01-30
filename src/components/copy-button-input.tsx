@@ -35,10 +35,10 @@ export function CopyButtonInput({
 	innerClassName,
 }: Props) {
 	// z-index 1 so that the ring when focused isn't covered up by the copy button border
-	const sharedStyles = clsx('rounded-r-none border-r-0 focus-visible:z-[1]', innerClassName);
+	const sharedStyles = clsx('rounded-r-none border-r-0 focus-visible:z-1', innerClassName);
 
 	return (
-		<div className={clsx('flex shadow-sm rounded-md w-full', className)}>
+		<div className={clsx('flex shadow-xs rounded-md w-full', className)}>
 			{editable && <Input className={sharedStyles} value={value} onChange={(e) => onChange?.(e.target.value)} />}
 			{!editable && <ReadonlyTextField className={sharedStyles}>{value}</ReadonlyTextField>}
 
