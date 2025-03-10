@@ -33,7 +33,7 @@ __metadata:
     lucide-react: "npm:^0.479.0"
     next: "npm:15.2.1"
     next-api-utils: "npm:2.0.0"
-    next-themes: "npm:0.3.0"
+    next-themes: "npm:0.4.5"
     postcss: "npm:^8"
     react: "npm:19.0.0"
     react-dom: "npm:19.0.0"
@@ -4109,13 +4109,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-themes@npm:0.3.0":
-  version: 0.3.0
-  resolution: "next-themes@npm:0.3.0"
+"next-themes@npm:0.4.5":
+  version: 0.4.5
+  resolution: "next-themes@npm:0.4.5"
   peerDependencies:
-    react: ^16.8 || ^17 || ^18
-    react-dom: ^16.8 || ^17 || ^18
-  checksum: 10c0/72bd670ad6b9f547dc18cece340dfd1ac41e3e7b37eb321d4767db90bfa2c239f937011cd0efe35ca0081f1ea260051bc0868808ef39b0fbff2ddefd7146cec6
+    react: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
+    react-dom: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
+  checksum: 10c0/62c9523fbe88a21dd86b220a1492f4e99467d9fdbbcb8ae61e0b5403cc49bdd094ee57b7e18e897c5c2c7509b993ad4a0234115d7ee962bdfb1e450081269f38
   languageName: node
   linkType: hard
 
