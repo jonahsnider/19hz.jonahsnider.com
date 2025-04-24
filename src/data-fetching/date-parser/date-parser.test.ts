@@ -13,10 +13,12 @@ type TestCase = {
 	};
 };
 
+const NOW = new Date('2024-10-01');
+
 function assertTestCase(testCase: TestCase) {
 	const { input: time, region, expected } = testCase;
 
-	const output = parseEventDate(time, region);
+	const output = parseEventDate(time, region, NOW);
 
 	assert.equal(output?.start.toLocaleString(undefined, { timeZone: testCase.expected.timezone }), expected.start);
 	assert.equal(output?.end?.toLocaleString(undefined, { timeZone: testCase.expected.timezone }), expected.end);

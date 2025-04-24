@@ -6,6 +6,7 @@ import { getTimezoneForRegion } from './timezone';
 export function parseEventDate(
 	rawDate: string,
 	region: string,
+	now?: Date,
 ):
 	| undefined
 	| {
@@ -23,7 +24,7 @@ export function parseEventDate(
 	// Replace characters that confuse chrono and add timezone base on what region the event is in
 	const normalized = `${identified} ${getTimezoneForRegion(region)}`;
 
-	const [parsed] = parse(normalized);
+	const [parsed] = parse(normalized, now);
 
 	if (!parsed) {
 		captureException(new RangeError(`Unable to parse event date after normalize: ${rawDate}`));
