@@ -30,7 +30,7 @@ __metadata:
     cmdk: "npm:1.1.1"
     date-fns: "npm:4.1.0"
     framer-motion: "npm:12.9.4"
-    lucide-react: "npm:^0.506.0"
+    lucide-react: "npm:^0.507.0"
     next: "npm:15.3.1"
     next-api-utils: "npm:2.0.0"
     next-themes: "npm:0.4.6"
@@ -4121,12 +4121,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lucide-react@npm:^0.506.0":
-  version: 0.506.0
-  resolution: "lucide-react@npm:0.506.0"
+"lucide-react@npm:^0.507.0":
+  version: 0.507.0
+  resolution: "lucide-react@npm:0.507.0"
   peerDependencies:
     react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 10c0/2f6ece3804804e2a558d179a9df2a472b736f8152d3daa6847dd0bf62330aefc2b1d02354ce0ab09a8d4e3018a915c7977ff56dadbe1c0fb06bc34bceca214a8
+  checksum: 10c0/a1ef4228512f9c4df87f48c3e38c63a23cfbf6d501d9b55e77cf76a7930f0aefdee84982109a0fdf049a2efb34f41adc7f966e683590c20321e70cb9969d1906
   languageName: node
   linkType: hard
 
