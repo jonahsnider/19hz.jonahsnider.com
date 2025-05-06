@@ -29,7 +29,7 @@ __metadata:
     clsx: "npm:^2.1.1"
     cmdk: "npm:1.1.1"
     date-fns: "npm:4.1.0"
-    framer-motion: "npm:12.9.7"
+    framer-motion: "npm:12.10.0"
     lucide-react: "npm:^0.507.0"
     next: "npm:15.3.1"
     next-api-utils: "npm:2.0.0"
@@ -3550,11 +3550,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:12.9.7":
-  version: 12.9.7
-  resolution: "framer-motion@npm:12.9.7"
+"framer-motion@npm:12.10.0":
+  version: 12.10.0
+  resolution: "framer-motion@npm:12.10.0"
   dependencies:
-    motion-dom: "npm:^12.9.6"
+    motion-dom: "npm:^12.10.0"
     motion-utils: "npm:^12.9.4"
     tslib: "npm:^2.4.0"
   peerDependencies:
@@ -3568,7 +3568,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 10c0/0193ea2d0d9f0b1b37ebd4e3debe3bdc9368627bfe83df8fff32095a3b600e7371f37ea50fc551b8a1905b8059caaabb15730fac7b2a60a3bb9bb68a4e84239c
+  checksum: 10c0/46af58aac72dbbdf87063cb4e76d923346b0adcefe635c04b4dca4b4d5f8c1ac298f9efc40c8e30ccbfbf20503d5b9687bcad3a5e0c22f856e5e72446dd14a58
   languageName: node
   linkType: hard
 
@@ -4293,12 +4293,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"motion-dom@npm:^12.9.6":
-  version: 12.9.6
-  resolution: "motion-dom@npm:12.9.6"
+"motion-dom@npm:^12.10.0":
+  version: 12.10.0
+  resolution: "motion-dom@npm:12.10.0"
   dependencies:
     motion-utils: "npm:^12.9.4"
-  checksum: 10c0/575201a381e329e4ba47cacadcc790190712393a07756fff0ef5209fad6c32c6c0d1c7523417951b13c05727688514febed0de7dbe5824d987081f879516d6e8
+  checksum: 10c0/1b87cb857d860c9db6bcad3c2176b1fec6536b7ab1a5d2b4eeddfb4f441f76e9bc096bb48c126ffe2d9ea10784a82767d2606bf9ffddfed6b9b9962303ee03af
   languageName: node
   linkType: hard
 
