@@ -32,7 +32,7 @@ __metadata:
     framer-motion: "npm:12.10.0"
     lucide-react: "npm:^0.507.0"
     next: "npm:15.3.1"
-    next-api-utils: "npm:2.0.0"
+    next-api-utils: "npm:2.0.2"
     next-themes: "npm:0.4.6"
     postcss: "npm:^8"
     react: "npm:19.1.0"
@@ -43,6 +43,7 @@ __metadata:
     tsx: "npm:4.19.4"
     typescript: "npm:^5"
     xmlbuilder2: "npm:3.1.1"
+    zod: "npm:3.24.4"
   languageName: unknown
   linkType: soft
 
@@ -4341,20 +4342,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-api-utils@npm:2.0.0":
-  version: 2.0.0
-  resolution: "next-api-utils@npm:2.0.0"
+"next-api-utils@npm:2.0.2":
+  version: 2.0.2
+  resolution: "next-api-utils@npm:2.0.2"
   dependencies:
     "@jonahsnider/util": "npm:^11.0.0"
     yn: "npm:^5.0.0"
-    zod: "npm:^3.22.2"
-    zod-validation-error: "npm:^3.0.0"
+    zod-validation-error: "npm:^3.4.0"
   peerDependencies:
     next: ^15
+    zod: ^3
   peerDependenciesMeta:
     next:
       optional: false
-  checksum: 10c0/2f102dd8701b6142600bccd5d9d0974977b091dabec9d42394a8f2b612477851aa21c54df2485b44f9fbbd9a3564df9b8caaa7b77c531bfb1fcfd60e3e5605c2
+  checksum: 10c0/1818e5de35a617dc7ea1c9f7b1a91dcc5036f39e2fb6c49bcf678aec7d4e94501ba22f1bbdd842948450f5a91acb1567920ae7a6e9b0c67cbe38977df594a338
   languageName: node
   linkType: hard
 
@@ -5662,18 +5663,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod-validation-error@npm:^3.0.0":
-  version: 3.4.0
-  resolution: "zod-validation-error@npm:3.4.0"
+"zod-validation-error@npm:^3.4.0":
+  version: 3.4.1
+  resolution: "zod-validation-error@npm:3.4.1"
   peerDependencies:
-    zod: ^3.18.0
-  checksum: 10c0/aaadb0e65c834aacb12fa088663d52d9f4224b5fe6958f09b039f4ab74145fda381c8a7d470bfddf7ddd9bbb5fdfbb52739cd66958ce6d388c256a44094d1fba
+    zod: ^3.24.4
+  checksum: 10c0/cf16f12fccb3e515d18c876c8a75ae4a87219b28e8e7f6334b8d423bebfa2c08b3382d7c53842ba05af8c5caabf66ee8df1ce2862b3b41c2e96eba26e70a995f
   languageName: node
   linkType: hard
 
-"zod@npm:^3.22.2":
-  version: 3.23.8
-  resolution: "zod@npm:3.23.8"
-  checksum: 10c0/8f14c87d6b1b53c944c25ce7a28616896319d95bc46a9660fe441adc0ed0a81253b02b5abdaeffedbeb23bdd25a0bf1c29d2c12dd919aef6447652dd295e3e69
+"zod@npm:3.24.4":
+  version: 3.24.4
+  resolution: "zod@npm:3.24.4"
+  checksum: 10c0/ab3112f017562180a41a0f83d870b333677f7d6b77f106696c56894567051b91154714a088149d8387a4f50806a2520efcb666f108cd384a35c236a191186d91
   languageName: node
   linkType: hard
