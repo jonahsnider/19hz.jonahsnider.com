@@ -35,7 +35,8 @@
 		"react-dom": "19.1.0",
 		"tailwind-merge": "^3.0.0",
 		"tailwindcss-animate": "^1.0.7",
-		"xmlbuilder2": "3.1.1"
+		"xmlbuilder2": "3.1.1",
+		"zod": "3.24.4"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
