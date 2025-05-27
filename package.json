@@ -3,12 +3,12 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev --turbo",
 		"build": "NODE_ENV=production next build",
-		"start": "next start",
-		"test": "tsx --test src/**/*.test.ts",
+		"dev": "next dev --turbo",
 		"lint": "biome check .",
-		"lint:fix": "biome check . --write --unsafe"
+		"lint:fix": "biome check . --write --unsafe",
+		"start": "next start",
+		"test": "tsx --test src/**/*.test.ts"
 	},
 	"dependencies": {
 		"@heroicons/react": "2.2.0",
