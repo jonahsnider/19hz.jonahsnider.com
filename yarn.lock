@@ -43,7 +43,7 @@ __metadata:
     tsx: "npm:4.19.4"
     typescript: "npm:^5"
     xmlbuilder2: "npm:3.1.1"
-    zod: "npm:3.25.58"
+    zod: "npm:3.25.62"
   languageName: unknown
   linkType: soft
 
@@ -5759,9 +5759,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:3.25.58":
-  version: 3.25.58
-  resolution: "zod@npm:3.25.58"
-  checksum: 10c0/3525e9104adcb84b48ff2c166a44175e2f4fd502bcab045bde7cb898097a3ff0cc8b03469d949f1c14455266fd9bedeea0b411ec624b42827db48ad942ffb3b1
+"zod@npm:3.25.62":
+  version: 3.25.62
+  resolution: "zod@npm:3.25.62"
+  checksum: 10c0/a98e53eddd689913a1d476ccfd3fd3ffbdf56c8e8606449445e4a36f31064551760c930c62381420605394e71b00d3397ea456637bacc7d2afe7c4946bf9c6b0
   languageName: node
   linkType: hard
