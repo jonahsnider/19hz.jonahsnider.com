@@ -40,12 +40,12 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@tailwindcss/postcss": "4.1.8",
+		"@tailwindcss/postcss": "4.1.10",
 		"@types/node": "^22.0.0",
 		"@types/react": "^19.0.0",
 		"@types/react-dom": "^19.0.0",
 		"postcss": "^8",
-		"tailwindcss": "4.1.8",
+		"tailwindcss": "4.1.10",
 		"tsx": "4.19.4",
 		"typescript": "^5"
 	},
