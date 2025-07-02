@@ -29,7 +29,7 @@ __metadata:
     clsx: "npm:^2.1.1"
     cmdk: "npm:1.1.1"
     date-fns: "npm:4.1.0"
-    framer-motion: "npm:12.22.0"
+    framer-motion: "npm:12.23.0"
     lucide-react: "npm:^0.525.0"
     next: "npm:15.3.4"
     next-api-utils: "npm:2.0.2"
@@ -3574,9 +3574,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:12.22.0":
-  version: 12.22.0
-  resolution: "framer-motion@npm:12.22.0"
+"framer-motion@npm:12.23.0":
+  version: 12.23.0
+  resolution: "framer-motion@npm:12.23.0"
   dependencies:
     motion-dom: "npm:^12.22.0"
     motion-utils: "npm:^12.19.0"
@@ -3592,7 +3592,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 10c0/44de4b8d21e947ecdb6a98a6167e5205996aa735f7a14967b5b54e9f33210f035754dd4414e003da5ec19d79abdf66f45d5c1bb980889390851d639942a68532
+  checksum: 10c0/9085c734767620442e03298f738be9c7fff60a8ca59dddf39cc037c45579d11d3ec3502a5c3eba32084c8c258f239048bbf68f5dac62e288d96b069ce54d12e1
   languageName: node
   linkType: hard
 
