@@ -1,5 +1,5 @@
-import { ThemeProvider } from '@/components/theme-provider';
 import type { Metadata } from 'next';
+import { ThemeProvider } from '@/components/theme-provider';
 import './globals.css';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';

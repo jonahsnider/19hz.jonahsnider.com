@@ -1,7 +1,7 @@
-import type { EventListing } from '@/data-fetching/event-listing';
 import fnv1a from '@sindresorhus/fnv1a';
 import { format } from 'date-fns';
 import { create, fragment } from 'xmlbuilder2';
+import type { EventListing } from '@/data-fetching/event-listing';
 
 export function createFeed(eventListings: EventListing[], region: string): string {
 	return create({ version: '1.0', encoding: 'utf-8' }).import(createAppRss(eventListings, region)).end();

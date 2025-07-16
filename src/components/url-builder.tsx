@@ -1,11 +1,11 @@
 'use client';
 
+import { CaretSortIcon, CheckIcon } from '@radix-ui/react-icons';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { cn } from '@/lib/utils';
-import { CaretSortIcon, CheckIcon } from '@radix-ui/react-icons';
-import { useState } from 'react';
 import { CopyButtonInput } from './copy-button-input';
 
 export function UrlBuilder() {
@@ -48,13 +48,7 @@ const KNOWN_REGIONS = {
 
 const KNOWN_REGIONS_ARRAY = Object.entries(KNOWN_REGIONS);
 
-export function RegionInput({
-	setValue,
-	value,
-}: {
-	value: string;
-	setValue: (value: string) => void;
-}) {
+export function RegionInput({ setValue, value }: { value: string; setValue: (value: string) => void }) {
 	const [open, setOpen] = useState(false);
 
 	return (
