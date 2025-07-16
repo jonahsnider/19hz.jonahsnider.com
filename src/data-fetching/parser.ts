@@ -12,7 +12,7 @@ export function parseEventListingHtml(html: string, region: string): EventListin
 
 	return eventsTableBody
 		.children('tr')
-		.map((index, row): EventListing | undefined => {
+		.map((_index, row): EventListing | undefined => {
 			const [rawDate, rawTitleAndVenue, rawTags, rawPriceAndAge, rawOrganizers, rawLink] = row.children;
 
 			const dateString = dom(rawDate).text();

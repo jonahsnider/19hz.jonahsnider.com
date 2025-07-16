@@ -1,6 +1,6 @@
+import { captureException } from '@sentry/nextjs';
 import { AppException } from '@/exceptions/app-exception';
 import { HTTPError } from '@/exceptions/http-exception';
-import { captureException } from '@sentry/nextjs';
 import type { EventListing } from './event-listing';
 import { parseEventListingHtml } from './parser';
 
