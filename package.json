@@ -46,7 +46,7 @@
 		"@types/react-dom": "^19.0.0",
 		"postcss": "^8",
 		"tailwindcss": "4.1.12",
-		"tsx": "4.20.4",
+		"tsx": "4.20.5",
 		"typescript": "^5"
 	},
 	"packageManager": "yarn@4.9.3"
