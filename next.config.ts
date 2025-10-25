@@ -3,6 +3,7 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
 	productionBrowserSourceMaps: true,
+	cacheComponents: true,
 };
 
 export default withSentryConfig(nextConfig, {
