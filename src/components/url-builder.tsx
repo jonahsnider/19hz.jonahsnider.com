@@ -54,7 +54,6 @@ export function RegionInput({ setValue, value }: { value: string; setValue: (val
 	return (
 		<Popover open={open} onOpenChange={setOpen}>
 			<PopoverTrigger asChild>
-				{/* biome-ignore lint/a11y/useSemanticElements: This is not accurate */}
 				<Button variant='outline' role='combobox' aria-expanded={open} className='w-full md:w-[400px] justify-between'>
 					{value ? KNOWN_REGIONS_ARRAY.find((region) => region[0] === value)?.[1] : 'Select framework...'}
 					<CaretSortIcon className='ml-2 h-4 w-4 shrink-0 opacity-50' />
