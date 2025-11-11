@@ -42,7 +42,7 @@
 		"@biomejs/biome": "2.1.4",
 		"@tailwindcss/postcss": "4.1.17",
 		"@types/node": "^22.0.0",
-		"@types/react": "19.2.2",
+		"@types/react": "19.2.3",
 		"@types/react-dom": "19.2.2",
 		"postcss": "^8",
 		"tailwindcss": "4.1.17",
