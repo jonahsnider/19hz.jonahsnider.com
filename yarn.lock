@@ -42,7 +42,7 @@ __metadata:
     tailwindcss-animate: "npm:^1.0.7"
     tsx: "npm:4.21.0"
     typescript: "npm:^5"
-    xmlbuilder2: "npm:4.0.1"
+    xmlbuilder2: "npm:4.0.3"
     zod: "npm:4.1.13"
   languageName: unknown
   linkType: soft
@@ -5776,15 +5776,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xmlbuilder2@npm:4.0.1":
-  version: 4.0.1
-  resolution: "xmlbuilder2@npm:4.0.1"
+"xmlbuilder2@npm:4.0.3":
+  version: 4.0.3
+  resolution: "xmlbuilder2@npm:4.0.3"
   dependencies:
     "@oozcitak/dom": "npm:^2.0.2"
     "@oozcitak/infra": "npm:^2.0.2"
     "@oozcitak/util": "npm:^10.0.0"
     js-yaml: "npm:^4.1.1"
-  checksum: 10c0/b8e8711116978635ad458c9170e9d846ea4ee1f3fc5063e6989b29327611d9adeeb7c11b1f8fb75403791de03859ac923c88ff4fd31b8734c9e4524a201b1d99
+  checksum: 10c0/ba257ca8a29b35d916fda190659b95d861137922fc792f760223f4a3bad07b5f18c992fb3a669d3dd6de6607eff64440cda86de083fc4648e4ec6b8f6be636a0
   languageName: node
   linkType: hard
 
