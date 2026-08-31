@@ -164,8 +164,8 @@ importers:
         specifier: 16.3.3
         version: 16.3.3(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@types/node@24.13.3)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       next-api-utils:
-        specifier: 3.0.1
-        version: 3.0.1(next@16.3.3(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@types/node@24.13.3)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(zod@4.5.4)
+        specifier: 3.0.2
+        version: 3.0.2(next@16.3.3(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@types/node@24.13.3)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(zod@4.5.4)
       next-themes:
         specifier: 0.4.6
         version: 0.4.6(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -690,8 +690,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@jonahsnider/util@11.0.0':
-    resolution: {integrity: sha512-PlH3+YwibBfsqSi1n6JekZMNOkQtr1hlgjDPu8qE/UY/56C3AAUfbUV3ExGFSa3mbwg0UB7g+3WvybM99leDmQ==}
+  '@jonahsnider/util@12.0.0':
+    resolution: {integrity: sha512-83YFLqiIGEkLSOWgb+DXgNOBB6I5Bha3815CIjyJ6++b5EgRoTfGpHK/NEMWzzqZ695NZWetZ/WFTy2OuUxzww==}
     engines: {node: '>=16'}
 
   '@jonahsnider/util@13.0.0':
@@ -2159,10 +2159,10 @@ packages:
   neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
 
-  next-api-utils@3.0.1:
-    resolution: {integrity: sha512-MEQHzS4feekD0YVkBmsLaTYKlB9Mr8iRqbdiMFQTgMRKW1Zx7G2jjx25PY6r+jhcZCrr+fp0F8eUflQx9dOYYA==}
+  next-api-utils@3.0.2:
+    resolution: {integrity: sha512-rBGvu41ETK/ZdLIdso0RmDPavfem0jmjcbhF3mnNOuN/SSoPDXqzCIvuB4Sn95TqgTBVJo/Uv48CZ4qs2GlsNg==}
     peerDependencies:
-      next: ^15
+      next: ^15 || ^16.0.0
       zod: ^4.0.0
 
   next-themes@0.4.6:
@@ -2978,7 +2978,7 @@ snapshots:
   '@img/sharp-win32-x64@0.35.4':
     optional: true
 
-  '@jonahsnider/util@11.0.0': {}
+  '@jonahsnider/util@12.0.0': {}
 
   '@jonahsnider/util@13.0.0': {}
 
@@ -4255,9 +4255,9 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  next-api-utils@3.0.1(next@16.3.3(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@types/node@24.13.3)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(zod@4.5.4):
+  next-api-utils@3.0.2(next@16.3.3(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@types/node@24.13.3)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(zod@4.5.4):
     dependencies:
-      '@jonahsnider/util': 11.0.0
+      '@jonahsnider/util': 12.0.0
       next: 16.3.3(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@types/node@24.13.3)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       yn: 5.1.0
       zod: 4.5.4
