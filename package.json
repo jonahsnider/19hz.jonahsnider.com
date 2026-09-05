@@ -49,7 +49,7 @@
 		"tsx": "4.23.13",
 		"typescript": "^7.0.0"
 	},
-	"packageManager": "pnpm@12.3.2",
+	"packageManager": "pnpm@12.3.3",
 	"devEngines": {
 		"runtime": {
 			"name": "node",
