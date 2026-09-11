@@ -39,7 +39,7 @@
 		"zod": "4.6.1"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.5.12",
+		"@biomejs/biome": "2.5.13",
 		"@tailwindcss/postcss": "4.3.3",
 		"@types/node": "^24.0.0",
 		"@types/react": "19.3.0",
