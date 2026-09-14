@@ -43,7 +43,6 @@ test('parses dates without end time', () => {
 		expected: {
 			timezone: 'America/Los_Angeles',
 			start: '10/21/2024, 8:00:00 PM',
-			end: undefined,
 		},
 	});
 	assertTestCase({
@@ -52,7 +51,6 @@ test('parses dates without end time', () => {
 		expected: {
 			timezone: 'America/Los_Angeles',
 			start: '10/21/2024, 8:30:00 PM',
-			end: undefined,
 		},
 	});
 });

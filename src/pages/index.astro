@@ -1,0 +1,10 @@
+---
+import { UrlBuilder } from '@/components/url-builder';
+import Layout from '@/layouts/layout.astro';
+---
+
+<Layout>
+	<main class='flex flex-col justify-center items-center flex-1'>
+		<UrlBuilder client:load />
+	</main>
+</Layout>

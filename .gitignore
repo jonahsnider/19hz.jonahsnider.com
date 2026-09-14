@@ -6,12 +6,11 @@
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
+# astro
+/.astro/
 
 # production
-/build
+/dist/
 
 # misc
 .DS_Store
@@ -23,12 +22,11 @@ npm-debug.log*
 # env files (can opt-in for commiting if needed)
 .env*
 
-# vercel
-.vercel
+# cloudflare
+/.wrangler/
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
 
 # Sentry Config File
 .env.sentry-build-plugin

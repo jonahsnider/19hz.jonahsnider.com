@@ -1,4 +1,4 @@
-import { captureException } from '@sentry/nextjs';
+import * as Sentry from '@sentry/astro';
 import { parse } from 'chrono-node';
 import { identifyDateFormat } from './heuristic';
 import { getTimezoneForRegion } from './timezone';
@@ -17,7 +17,7 @@ export function parseEventDate(
 	const identified = identifyDateFormat(rawDate);
 
 	if (!identified) {
-		captureException(new RangeError(`Unable to normalize event date: ${rawDate}`));
+		Sentry.captureException(new RangeError(`Unable to normalize event date: ${rawDate}`));
 		return undefined;
 	}
 
@@ -27,7 +27,7 @@ export function parseEventDate(
 	const [parsed] = parse(normalized, now);
 
 	if (!parsed) {
-		captureException(new RangeError(`Unable to parse event date after normalize: ${rawDate}`));
+		Sentry.captureException(new RangeError(`Unable to parse event date after normalize: ${rawDate}`));
 		return undefined;
 	}
 

@@ -1,10 +1,9 @@
-import { NextResponse } from 'next/server';
-import { type BaseException, TO_RESPONSE } from 'next-api-utils';
+export class AppException extends Error {
+	readonly status: number;
 
-export class AppException extends Error implements BaseException {
-	[TO_RESPONSE](): NextResponse {
-		return NextResponse.json({
-			message: this.message,
-		});
+	constructor(message: string, status = 500, options?: ErrorOptions) {
+		super(message, options);
+		this.name = 'AppException';
+		this.status = status;
 	}
 }

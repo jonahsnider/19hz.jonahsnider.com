@@ -1,10 +1,9 @@
-'use client';
-
 import { CaretSortIcon, CheckIcon } from '@radix-ui/react-icons';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { TooltipProvider } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
 import { CopyButtonInput } from './copy-button-input';
 
@@ -12,17 +11,19 @@ export function UrlBuilder() {
 	const [region, setRegion] = useState('BayArea');
 
 	return (
-		<div className='flex flex-col gap-4 items-center justify-center'>
-			<RegionInput value={region} setValue={setRegion} />
+		<TooltipProvider>
+			<div className='flex flex-col gap-4 items-center justify-center'>
+				<RegionInput value={region} setValue={setRegion} />
 
-			<div>
-				<CopyButtonInput
-					value={`19hz.jonahsnider.com/api/region/${encodeURIComponent(region)}/feed.xml`}
-					copyValue={`https://19hz.jonahsnider.com/api/region/${encodeURIComponent(region)}/feed.xml`}
-					editable={false}
-				/>
+				<div>
+					<CopyButtonInput
+						value={`19hz.jonahsnider.com/api/region/${encodeURIComponent(region)}/feed.xml`}
+						copyValue={`https://19hz.jonahsnider.com/api/region/${encodeURIComponent(region)}/feed.xml`}
+						editable={false}
+					/>
+				</div>
 			</div>
-		</div>
+		</TooltipProvider>
 	);
 }
 
@@ -55,7 +56,7 @@ export function RegionInput({ setValue, value }: { value: string; setValue: (val
 		<Popover open={open} onOpenChange={setOpen}>
 			<PopoverTrigger asChild>
 				<Button variant='outline' role='combobox' aria-expanded={open} className='w-full md:w-[400px] justify-between'>
-					{value ? KNOWN_REGIONS_ARRAY.find((region) => region[0] === value)?.[1] : 'Select framework...'}
+					{value ? KNOWN_REGIONS_ARRAY.find((region) => region[0] === value)?.[1] : 'Select region...'}
 					<CaretSortIcon className='ml-2 h-4 w-4 shrink-0 opacity-50' />
 				</Button>
 			</PopoverTrigger>

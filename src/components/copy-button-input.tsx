@@ -1,5 +1,3 @@
-'use client';
-
 import { CheckIcon, ClipboardIcon } from '@heroicons/react/16/solid';
 import clsx from 'clsx';
 import { AnimatePresence, motion, type Variants } from 'framer-motion';
@@ -59,7 +57,7 @@ const MotionCheckIcon = motion.create(CheckIcon);
 
 function CopyButton({ value }: { value: string }) {
 	const [isCopied, setIsCopied] = useState(false);
-	const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | undefined>();
+	const [timeoutId, setTimeoutId] = useState<ReturnType<typeof setTimeout> | undefined>();
 
 	const onClick = () => {
 		navigator.clipboard.writeText(value);
