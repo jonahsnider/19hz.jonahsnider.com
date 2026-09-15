@@ -5,6 +5,7 @@ import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, Command
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
+import { REGIONS } from '@/regions';
 import { CopyButtonInput } from './copy-button-input';
 
 export function UrlBuilder() {
@@ -27,27 +28,7 @@ export function UrlBuilder() {
 	);
 }
 
-const KNOWN_REGIONS = {
-	BayArea: 'San Francisco Bay Area / Northern California',
-	LosAngeles: 'Los Angeles / Southern California',
-	Seattle: 'Seattle',
-	Atlanta: 'Atlanta',
-	Miami: 'Miami',
-	DC: 'Washington, DC / Maryland / Virginia',
-	Texas: 'Texas',
-	Iowa: 'Iowa / Nebraska',
-	Denver: 'Denver',
-	CHI: 'Chicago',
-	Detroit: 'Detroit',
-	Massachusetts: 'Massachusetts',
-	LasVegas: 'Las Vegas',
-	Phoenix: 'Phoenix',
-	PNW: 'PNW',
-	ORE: 'Oregon',
-	BC: 'British Columbia',
-} as const;
-
-const KNOWN_REGIONS_ARRAY = Object.entries(KNOWN_REGIONS);
+const REGIONS_ARRAY = Object.entries(REGIONS);
 
 export function RegionInput({ setValue, value }: { value: string; setValue: (value: string) => void }) {
 	const [open, setOpen] = useState(false);
@@ -56,7 +37,7 @@ export function RegionInput({ setValue, value }: { value: string; setValue: (val
 		<Popover open={open} onOpenChange={setOpen}>
 			<PopoverTrigger asChild>
 				<Button variant='outline' role='combobox' aria-expanded={open} className='w-full md:w-[400px] justify-between'>
-					{value ? KNOWN_REGIONS_ARRAY.find((region) => region[0] === value)?.[1] : 'Select region...'}
+					{value ? REGIONS[value as keyof typeof REGIONS]?.name : 'Select region...'}
 					<CaretSortIcon className='ml-2 h-4 w-4 shrink-0 opacity-50' />
 				</Button>
 			</PopoverTrigger>
@@ -66,17 +47,17 @@ export function RegionInput({ setValue, value }: { value: string; setValue: (val
 					<CommandList>
 						<CommandEmpty>No region found.</CommandEmpty>
 						<CommandGroup>
-							{KNOWN_REGIONS_ARRAY.map((region) => (
+							{REGIONS_ARRAY.map(([region, metadata]) => (
 								<CommandItem
-									key={region[0]}
-									value={region[0]}
-									onSelect={(currentValue) => {
-										setValue(currentValue === value ? '' : currentValue);
+									key={region}
+									value={metadata.name}
+									onSelect={() => {
+										setValue(region);
 										setOpen(false);
 									}}
 								>
-									{region[1]}
-									<CheckIcon className={cn('ml-auto h-4 w-4', value === region[0] ? 'opacity-100' : 'opacity-0')} />
+									{metadata.name}
+									<CheckIcon className={cn('ml-auto h-4 w-4', value === region ? 'opacity-100' : 'opacity-0')} />
 								</CommandItem>
 							))}
 						</CommandGroup>

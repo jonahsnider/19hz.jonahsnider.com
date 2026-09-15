@@ -10,7 +10,7 @@
 		"lint": "biome check .",
 		"lint:fix": "biome check . --write --unsafe",
 		"preview": "pnpm build && wrangler dev",
-		"test": "tsx --test src/**/*.test.ts"
+		"test": "tsx --test 'src/**/*.test.ts'"
 	},
 	"dependencies": {
 		"@astrojs/cloudflare": "14.3.1",

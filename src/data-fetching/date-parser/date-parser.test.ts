@@ -87,4 +87,13 @@ test('parses dates in different timezones', () => {
 			end: '10/27/2024, 1:00:00 AM',
 		},
 	});
+
+	assertTestCase({
+		input: 'Fri: Oct 25 (8pm)',
+		region: 'Toronto',
+		expected: {
+			timezone: 'America/Toronto',
+			start: '10/25/2024, 8:00:00 PM',
+		},
+	});
 });
