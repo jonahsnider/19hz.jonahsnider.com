@@ -223,6 +223,9 @@ importers:
       date-fns:
         specifier: 4.4.0
         version: 4.4.0
+      fetch-extras:
+        specifier: ^3.2.1
+        version: 3.2.1
       framer-motion:
         specifier: 13.2.0
         version: 13.2.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
@@ -2367,6 +2370,10 @@ packages:
     peerDependenciesMeta:
       picomatch:
         optional: true
+
+  fetch-extras@3.2.1:
+    resolution: {integrity: sha512-MuxNR+WUQiu6i4xEDrtoSzSwoqDR2QhN8KU5jlFdAyM3aJmPYwOVC/PwkL5tqyzFMoxz9aGzYyPKRrnSkJQsEA==}
+    engines: {node: '>=22'}
 
   find-proc@0.1.0:
     resolution: {integrity: sha512-OaOpEYv2PiQ7SQ5LIrl+deA1XaWcxEjnpM6VuWXTUvn+teIXxeFTLDmu18/zDQpFmHN4o3oDBX+BT0AGwEhemg==}
@@ -5386,6 +5393,8 @@ snapshots:
   fdir@6.5.0(picomatch@4.0.7):
     optionalDependencies:
       picomatch: 4.0.7
+
+  fetch-extras@3.2.1: {}
 
   find-proc@0.1.0: {}
 
