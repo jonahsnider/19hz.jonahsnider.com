@@ -51,7 +51,7 @@
 		"tailwindcss": "4.3.3",
 		"tsx": "4.23.13",
 		"typescript": "^7.0.0",
-		"wrangler": "4.134.0"
+		"wrangler": "4.135.0"
 	},
 	"packageManager": "pnpm@12.4.2",
 	"devEngines": {
