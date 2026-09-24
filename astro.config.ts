@@ -8,10 +8,8 @@ export default defineConfig({
 	adapter: cloudflare({ imageService: 'passthrough' }),
 	integrations: [
 		sentry({
-			sourceMapsUploadOptions: {
-				org: 'jonah-snider',
-				project: '19hz',
-			},
+			org: 'jonah-snider',
+			project: '19hz',
 		}),
 		react(),
 	],
