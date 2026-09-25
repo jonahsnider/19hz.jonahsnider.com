@@ -25,7 +25,7 @@
 		"@sentry/astro": "11.0.0",
 		"@sentry/cloudflare": "11.0.0",
 		"@sindresorhus/fnv1a": "3.1.0",
-		"astro": "7.3.4",
+		"astro": "7.3.5",
 		"cheerio": "1.2.0",
 		"chrono-node": "2.10.1",
 		"class-variance-authority": "^0.7.0",
