@@ -53,7 +53,7 @@
 		"typescript": "^7.0.0",
 		"wrangler": "4.143.0"
 	},
-	"packageManager": "pnpm@12.8.0",
+	"packageManager": "pnpm@12.8.1",
 	"devEngines": {
 		"runtime": {
 			"name": "node",
