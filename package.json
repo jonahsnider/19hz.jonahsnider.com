@@ -27,7 +27,7 @@
 		"@sindresorhus/fnv1a": "3.1.0",
 		"astro": "7.3.5",
 		"cheerio": "1.2.0",
-		"chrono-node": "2.10.1",
+		"chrono-node": "2.10.2",
 		"class-variance-authority": "^0.7.0",
 		"clsx": "^2.1.1",
 		"cmdk": "1.1.1",
