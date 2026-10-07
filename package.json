@@ -13,8 +13,8 @@
 		"test": "tsx --test 'src/**/*.test.ts'"
 	},
 	"dependencies": {
-		"@astrojs/cloudflare": "14.3.3",
-		"@astrojs/react": "7.0.0",
+		"@astrojs/cloudflare": "14.3.4",
+		"@astrojs/react": "7.0.1",
 		"@heroicons/react": "2.2.0",
 		"@jonahsnider/util": "13.0.0",
 		"@radix-ui/react-dialog": "^1.1.2",
@@ -25,7 +25,7 @@
 		"@sentry/astro": "11.4.0",
 		"@sentry/cloudflare": "11.4.0",
 		"@sindresorhus/fnv1a": "3.1.0",
-		"astro": "7.3.5",
+		"astro": "7.3.6",
 		"cheerio": "1.2.0",
 		"chrono-node": "2.10.2",
 		"class-variance-authority": "^0.7.0",
