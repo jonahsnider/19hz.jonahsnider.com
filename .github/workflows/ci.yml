@@ -3,8 +3,8 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  build:
-    name: Build
+  build-and-test:
+    name: Build and test
 
     runs-on: ubuntu-latest
 
@@ -15,33 +15,10 @@ jobs:
         uses: pnpm/setup@v3
         with:
           cache: true
-      - name: Build for production
-        run: pnpm run build
-  lint:
-    name: Lint
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Git repository
-        uses: actions/checkout@v7
-      - name: Setup pnpm
-        uses: pnpm/setup@v3
-        with:
-          cache: true
-      - name: Lint
-        run: pnpm run lint
-  test:
-    name: Test
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Git repository
-        uses: actions/checkout@v7
-      - name: Setup pnpm
-        uses: pnpm/setup@v3
-        with:
-          cache: true
-      - name: Test
-        run: pnpm run test
+      - parallel:
+          - name: Build for production
+            run: pnpm run build
+          - name: Lint
+            run: pnpm run lint
+          - name: Test
+            run: pnpm run test
