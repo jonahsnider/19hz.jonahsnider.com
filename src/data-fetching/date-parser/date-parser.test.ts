@@ -24,7 +24,7 @@ function assertTestCase(testCase: TestCase) {
 	assert.equal(output?.end?.toLocaleString(undefined, { timeZone: testCase.expected.timezone }), expected.end);
 }
 
-test('parses dates with start and end time', () => {
+await test('parses dates with start and end time', () => {
 	assertTestCase({
 		input: 'Mon: Oct 21 (7:30pm-8:45pm)',
 		region: 'BayArea',
@@ -36,7 +36,7 @@ test('parses dates with start and end time', () => {
 	});
 });
 
-test('parses dates without end time', () => {
+await test('parses dates without end time', () => {
 	assertTestCase({
 		input: 'Mon: Oct 21 (8pm)',
 		region: 'BayArea',
@@ -55,7 +55,7 @@ test('parses dates without end time', () => {
 	});
 });
 
-test('parses multiple dates', () => {
+await test('parses multiple dates', () => {
 	assertTestCase({
 		input: 'Fri: Oct 25-Sun: Oct 27 (Fri: 6pm-Sun: 1am)',
 		region: 'BayArea',
@@ -77,7 +77,7 @@ test('parses multiple dates', () => {
 	});
 });
 
-test('parses dates in different timezones', () => {
+await test('parses dates in different timezones', () => {
 	assertTestCase({
 		input: 'Fri: Oct 25-Sun: Oct 27 (Fri: 6pm-Sun: 1am)',
 		region: 'Texas',

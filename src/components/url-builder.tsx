@@ -30,7 +30,7 @@ export function UrlBuilder() {
 
 const REGIONS_ARRAY = Object.entries(REGIONS);
 
-export function RegionInput({ setValue, value }: { value: string; setValue: (value: string) => void }) {
+function RegionInput({ setValue, value }: { value: string; setValue: (value: string) => void }) {
 	const [open, setOpen] = useState(false);
 
 	return (

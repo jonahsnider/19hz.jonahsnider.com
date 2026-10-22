@@ -2,9 +2,13 @@ name: CI
 
 on: [push, pull_request]
 
+permissions:
+  contents: read
+
 jobs:
   build-and-test:
     name: Build and test
+    timeout-minutes: 5
 
     runs-on: ubuntu-latest
 
@@ -15,10 +19,15 @@ jobs:
         uses: pnpm/setup@v3
         with:
           cache: true
+          require-lockfile: true
       - parallel:
           - name: Build for production
             run: pnpm run build
           - name: Lint
             run: pnpm run lint
+          - name: Check formatting
+            run: pnpm run format
+          - name: Check unused dependencies and exports
+            run: pnpm run knip
           - name: Test
             run: pnpm run test

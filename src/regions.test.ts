@@ -6,7 +6,7 @@ import { REGIONS } from './regions';
 const REGIONS_URL = 'https://19hz.info/';
 const REGION_PATH_PATTERN = /^\/eventlisting_([A-Za-z0-9_-]+)\.php$/;
 
-test('includes every region listed by 19hz.info', { timeout: 10_000 }, async () => {
+await test('includes every region listed by 19hz.info', { timeout: 10_000 }, async () => {
 	const response = await fetch(REGIONS_URL, {
 		headers: { 'user-agent': '19hz.jonahsnider.com integration test' },
 	});

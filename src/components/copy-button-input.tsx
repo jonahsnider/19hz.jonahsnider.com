@@ -60,7 +60,7 @@ function CopyButton({ value }: { value: string }) {
 	const [timeoutId, setTimeoutId] = useState<ReturnType<typeof setTimeout> | undefined>();
 
 	const onClick = () => {
-		navigator.clipboard.writeText(value);
+		void navigator.clipboard.writeText(value);
 		setIsCopied(true);
 		clearTimeout(timeoutId);
 

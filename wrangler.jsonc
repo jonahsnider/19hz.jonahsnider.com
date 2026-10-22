@@ -5,16 +5,16 @@
 	"routes": [
 		{
 			"pattern": "19hz.jonahsnider.com",
-			"custom_domain": true
-		}
+			"custom_domain": true,
+		},
 	],
 	"compatibility_date": "2026-09-14",
 	"compatibility_flags": ["nodejs_compat"],
 	"assets": {
 		"binding": "ASSETS",
-		"directory": "./dist"
+		"directory": "./dist",
 	},
 	"observability": {
-		"enabled": true
-	}
+		"enabled": true,
+	},
 }
