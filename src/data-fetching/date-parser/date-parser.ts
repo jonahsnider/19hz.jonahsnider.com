@@ -1,7 +1,7 @@
 import * as Sentry from '@sentry/astro';
 import { parse } from 'chrono-node';
-import { identifyDateFormat } from './heuristic';
-import { getTimezoneForRegion } from './timezone';
+import { identifyDateFormat } from './heuristic.ts';
+import { getTimezoneForRegion } from './timezone.ts';
 
 export function parseEventDate(
 	rawDate: string,

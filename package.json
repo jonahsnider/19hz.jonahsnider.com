@@ -11,7 +11,7 @@
 		"lint": "oxlint",
 		"lint:fix": "oxlint --fix",
 		"preview": "pnpm build && wrangler dev",
-		"test": "tsx --test 'src/**/*.test.ts'",
+		"test": "node --test 'src/**/*.test.ts'",
 		"format": "oxfmt --check",
 		"format:fix": "oxfmt",
 		"knip": "knip"
@@ -53,7 +53,6 @@
 		"oxlint": "1.89.0",
 		"oxlint-tsgolint": "7.0.2004",
 		"tailwindcss": "4.3.3",
-		"tsx": "4.23.15",
 		"typescript": "7.0.2",
 		"wrangler": "4.151.3"
 	},

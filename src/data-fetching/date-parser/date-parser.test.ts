@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { parseEventDate } from './date-parser';
+import { parseEventDate } from './date-parser.ts';
 
 type TestCase = {
 	input: string;

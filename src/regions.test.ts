@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { load } from 'cheerio';
-import { REGIONS } from './regions';
+import { REGIONS } from './regions.ts';
 
 const REGIONS_URL = 'https://19hz.info/';
 const REGION_PATH_PATTERN = /^\/eventlisting_([A-Za-z0-9_-]+)\.php$/;

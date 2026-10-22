@@ -1,4 +1,4 @@
-import { REGIONS } from '@/regions';
+import { REGIONS } from '../../regions.ts';
 
 export function getTimezoneForRegion(region: string): string {
 	if (region in REGIONS) {
