@@ -45,7 +45,7 @@
 	"devDependencies": {
 		"@astrojs/compiler-rs": "0.5.2",
 		"@tailwindcss/vite": "4.3.3",
-		"@types/node": "24.19.2",
+		"@types/node": "26.6.5",
 		"@types/react": "19.3.0",
 		"@types/react-dom": "19.3.0",
 		"knip": "6.43.0",
