@@ -4,7 +4,7 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"build": "tsc --noEmit && astro build",
+		"build": "astro sync && tsc --noEmit --runExternalCode && astro build",
 		"deploy": "pnpm build && wrangler deploy",
 		"dev": "astro dev",
 		"generate-types": "wrangler types",
@@ -44,6 +44,7 @@
 	},
 	"devDependencies": {
 		"@astrojs/compiler-rs": "0.5.2",
+		"@astrojs/ts-content-mapper": "0.2.0",
 		"@tailwindcss/vite": "4.3.3",
 		"@types/node": "26.6.5",
 		"@types/react": "19.3.0",
@@ -53,7 +54,7 @@
 		"oxlint": "1.90.0",
 		"oxlint-tsgolint": "7.0.2005",
 		"tailwindcss": "4.3.3",
-		"typescript": "7.0.2",
+		"typescript": "7.1.0-beta",
 		"wrangler": "4.154.0"
 	},
 	"devEngines": {

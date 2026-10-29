@@ -6,6 +6,12 @@
 			"@/*": ["./src/*"]
 		}
 	},
+	"contentMappers": [
+		{
+			"package": "@astrojs/ts-content-mapper",
+			"extensions": [".astro"]
+		}
+	],
 	"include": [".astro/types.d.ts", "**/*"],
 	"exclude": ["dist"]
 }
