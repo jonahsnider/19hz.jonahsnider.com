@@ -51,7 +51,7 @@
 		"@types/react-dom": "19.3.0",
 		"knip": "6.44.2",
 		"oxfmt": "0.78.0",
-		"oxlint": "1.92.0",
+		"oxlint": "1.93.0",
 		"oxlint-tsgolint": "7.0.2006",
 		"tailwindcss": "4.3.5",
 		"typescript": "7.1.0-dev.20261109.1",
