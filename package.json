@@ -54,7 +54,7 @@
 		"oxlint": "1.93.0",
 		"oxlint-tsgolint": "7.0.2007",
 		"tailwindcss": "4.3.5",
-		"typescript": "7.1.0-dev.20261112.1",
+		"typescript": "7.1.0-dev.20261113.1",
 		"wrangler": "4.161.0"
 	},
 	"devEngines": {
