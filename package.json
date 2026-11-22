@@ -52,7 +52,7 @@
 		"knip": "6.47.0",
 		"oxfmt": "0.79.0",
 		"oxlint": "1.94.0",
-		"oxlint-tsgolint": "7.0.2007",
+		"oxlint-tsgolint": "7.0.2008",
 		"tailwindcss": "4.3.5",
 		"typescript": "7.1.0-dev.20261121.1",
 		"wrangler": "4.166.0"
