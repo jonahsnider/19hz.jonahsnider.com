@@ -27,7 +27,7 @@
 		"@radix-ui/react-tooltip": "1.4.1",
 		"@sentry/astro": "11.18.0",
 		"@sentry/cloudflare": "11.18.0",
-		"@sindresorhus/fnv1a": "3.1.0",
+		"@sindresorhus/fnv1a": "4.0.0",
 		"astro": "7.4.12",
 		"cheerio": "1.2.0",
 		"chrono-node": "2.10.3",
